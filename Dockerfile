@@ -12,4 +12,5 @@ RUN cd /root && wget  https://github.com/wizardofzos/KottelCoinWallet/blob/maste
 RUN apt-get install -y libqt5widgets5
 RUN apt-get install -y xorg
 RUN chmod +x /root/KottelCoin
+VOLUME ['/crypto']
 CMD /root/KottelCoin --data-dir /crypto
