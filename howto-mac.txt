@@ -1,0 +1,16 @@
+# 
+# KottelCoin
+#
+
+docker load < kottelcoin.tar
+
+
+on Mac start with
+
+- ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+- docker run -d -e DISPLAY=$ip:0 -v <local-data-dir>:/crypto -v /tmp/.X11-unix:/tmp/.X11-unix kottelcoin
+
+(make sure to have XQuartz)
+
+
+
